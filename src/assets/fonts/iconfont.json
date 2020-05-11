@@ -1,0 +1,30 @@
+{
+  "id": "1461328",
+  "name": "汇通启富",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2122953",
+      "name": "垃圾桶",
+      "font_class": "del",
+      "unicode": "e74c",
+      "unicode_decimal": 59212
+    },
+    {
+      "icon_id": "8723328",
+      "name": "完成",
+      "font_class": "ok",
+      "unicode": "e7a5",
+      "unicode_decimal": 59301
+    },
+    {
+      "icon_id": "11474906",
+      "name": "返回",
+      "font_class": "back",
+      "unicode": "e7c7",
+      "unicode_decimal": 59335
+    }
+  ]
+}
