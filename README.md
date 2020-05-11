@@ -21,3 +21,9 @@ npm run build
 ```
 npm run lint
 ```
+
+### 20200511更新
+vue-cli + vant 
+读取excel表格
+H5单页面展示
+数据自定义
