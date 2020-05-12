@@ -16,12 +16,12 @@
           <van-col span="5">
             <van-image lazy-load :src="items.img" />
           </van-col>
-          <van-col span="14">{{ items.value || "" }}</van-col>
+          <van-col span="14" @click="showMore(items)">{{ items.value || "" }}</van-col>
         </van-row>
       </div>
     </div>
     <!-- 弹框 -->
-    <!-- <van-popup v-model="popFlag">{{popContent}}</van-popup> -->
+    <van-popup v-model="popFlag">{{popContent}}</van-popup>
   </div>
 </template>
 
@@ -105,6 +105,18 @@ export default {
         res[res.length - 1].img = url;
         this.headData[0] = res[res.length - 1];
       }
+    },
+    showMore(i) {
+      console.log(i)
+      let val = i.detail + '';
+      this.popContent = '';
+      console.log(val.length)
+      if (val.length <= 0) {
+        return;
+      }
+      this.popFlag = true;
+      this.popContent = val;
+      
     }
   },
   directives: {
@@ -113,7 +125,7 @@ export default {
   filters: {
     comTime(val) {
       val = typeof val === 'number' ? val + '' : val;
-      let time = val.slice(0, 4) + '-' + val.slice(4, 6) + '-' + val.slice(6, 8);
+      let time = val.length > 6 ? val.slice(0, 4) + '-' + val.slice(4, 6) + '-' + val.slice(6, 8) : '';
       return time;
     }
   }
